@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Little Book of Love — For Preston</title>
+<style>
+:root{--paper:#f3eadb;--card:#fbf6ec;--ink:#642c35;--muted:#79523e;--line:#b69b7d;--rose:#914b56;--shadow:0 12px 30px #4b2c2418}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 10%,#fff9ee 0,transparent 28%),var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman',serif}
+.wrap{max-width:850px;margin:auto;padding:24px 16px 56px}.hero,.progress,.coupon,.letter,.secret{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+.hero{padding:24px;text-align:center;position:relative;overflow:hidden}.eyebrow{font:700 11px Arial,sans-serif;letter-spacing:2px;color:var(--muted)}.stamp{display:inline-grid;place-items:center;width:76px;height:76px;border:2px dashed var(--rose);border-radius:50%;color:var(--rose);font-size:26px;transform:rotate(-10deg);margin:12px auto}.hero h1{font-size:clamp(34px,7vw,54px);font-weight:normal;margin:6px 0;color:var(--ink)}.subtitle{font-style:italic;color:var(--muted);font-size:19px}.rule{border:0;border-top:1px solid var(--line);margin:18px 0}.issued{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font:11px Arial,sans-serif;letter-spacing:1px;color:var(--muted)}
+.progress{padding:16px 18px;margin:16px 0}.progress-top{display:flex;justify-content:space-between;align-items:center;font:700 12px Arial,sans-serif;letter-spacing:1px}.count{font:normal 25px Georgia;color:var(--ink)}.track{height:9px;background:#dfd0ba;border-radius:99px;overflow:hidden;margin:10px 0 7px}.fill{height:100%;width:0;background:var(--rose);transition:width .35s}.hint{font-size:13px;color:var(--muted)}
+h2{font-size:25px;font-weight:normal;margin:26px 0 6px}.section-note{font:11px Arial,sans-serif;letter-spacing:1.4px;color:var(--muted);margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.coupon{padding:15px;text-align:left;cursor:pointer;color:inherit;transition:transform .15s,border-color .15s;min-height:180px}.coupon:hover{transform:translateY(-3px);border-color:var(--rose)}.coupon:focus-visible,button:focus-visible{outline:3px solid #b56b77;outline-offset:3px}.num{font:700 11px Arial,sans-serif;letter-spacing:1.5px;color:var(--rose);display:flex;justify-content:space-between}.coupon h3{font-size:20px;font-weight:normal;margin:16px 0 8px}.coupon p{font-size:14px;line-height:1.45;color:var(--muted);margin:0 0 12px}.fine{font-size:11px;color:var(--muted);font-style:italic;border-top:1px dashed var(--line);padding-top:9px}.status{display:inline-block;margin-top:10px;background:#e9dfcf;color:#6b3b40;padding:5px 8px;border-radius:20px;font:10px Arial,sans-serif;letter-spacing:.5px}.coupon.done{opacity:.72;border-style:dashed}.coupon.done .status{background:#e1eadc;color:#3d633d}
+.secret{display:none;margin-top:22px;padding:22px;text-align:center;animation:appear .8s ease both}.secret.show{display:block}.secret h2{font-size:32px;font-style:italic;margin:8px 0 16px}.secret p{color:var(--muted);line-height:1.7;text-align:left}.secret .sign{text-align:right;color:var(--ink);font-style:italic;font-size:19px}.seal{display:inline-grid;place-items:center;width:54px;height:54px;border-radius:50%;background:var(--rose);color:#fff3e5;box-shadow:inset 0 0 0 3px #ffffff55;font-size:22px;margin:10px}
+footer{text-align:center;color:var(--muted);font:10px Arial,sans-serif;letter-spacing:1px;margin-top:24px;line-height:1.8}
+.modal{position:fixed;inset:0;background:#241416a8;display:none;align-items:center;justify-content:center;padding:18px;z-index:5}.modal.open{display:flex}.letter{width:min(100%,480px);padding:25px;position:relative}.letter h2{margin:12px 0;font-size:29px}.letter p{color:var(--muted);line-height:1.6}.letter .fine{margin-top:15px}.actions{display:flex;gap:9px;margin-top:20px;flex-wrap:wrap}button{font:13px Arial,sans-serif;cursor:pointer;border:1px solid var(--rose);border-radius:8px;padding:11px 14px;background:var(--rose);color:#fff8ed}button.secondary{background:transparent;color:var(--rose)}.close{position:absolute;right:12px;top:12px;background:transparent;color:var(--muted);border:0;font-size:20px;padding:4px 8px}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media(max-width:540px){.grid{grid-template-columns:1fr}.coupon{min-height:0}.hero{padding:20px 16px}.issued{justify-content:center}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <div class="eyebrow">SIMILICIOUS CORPORATION™ · EST. WITH LOVE</div>
+    <div class="stamp" aria-hidden="true">♡</div>
+    <h1>A Little Book of Love</h1>
+    <div class="subtitle">For my favourite Pereira</div>
+    <hr class="rule">
+    <p style="color:var(--muted);line-height:1.55;max-width:510px;margin:0 auto">Ten little promises, dates and moments, specially reserved for you. Open a letter and see what you've been issued.</p>
+    <hr class="rule">
+    <div class="issued"><span>ISSUED TO: PRESTON PEREIRA</span><span>ISSUED BY: SIM ♡</span></div>
+  </header>
+
+  <section class="progress" aria-label="Coupon redemption progress">
+    <div class="progress-top"><span>YOUR REDEMPTION RECORD</span><span class="count" id="count">0/10</span></div>
+    <div class="track"><div class="fill" id="fill"></div></div>
+    <div class="hint" id="hint">10 little treats are waiting to be claimed.</div>
+  </section>
+
+  <h2>The Voucher Collection</h2>
+  <div class="section-note">SELECT A LETTER TO REVEAL YOUR COUPON</div>
+  <section class="grid" id="coupons"></section>
+
+  <section class="secret" id="secret" aria-live="polite">
+    <div class="eyebrow">A FINAL LETTER · SEALED WITH LOVE</div>
+    <div class="seal">♡</div>
+    <h2>One Last Letter...</h2>
+    <p><em>My dearest Pereira,</em></p>
+    <p>If you're reading this, congratulations. You've successfully exhausted your girlfriend's coupon collection. I hope you enjoyed your privileges.</p>
+    <p>But here's the thing: these little vouchers are just excuses to spend more time with you, make memories, laugh at absolutely nothing and remind you how much you mean to me.</p>
+    <p>There's no coupon for loving you, because that was never something you needed to redeem. It's already yours.</p>
+    <p class="sign">All my love, Sim ♡</p>
+    <hr class="rule">
+    <div class="eyebrow">SEALED WITH LOVE · NEVER EXPIRES</div>
+  </section>
+
+  <footer>AUTHORISED BY THE DIRECTOR OF SIMILICIOUS CORPORATION<br>NO REFUNDS · NO EXCHANGES · VALID WITH LOVE</footer>
+</main>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <article class="letter">
+    <button class="close" id="close" aria-label="Close">×</button>
+    <div class="eyebrow" id="modalNumber">A LETTER FOR PRESTON</div>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+    <div class="fine" id="modalFine"></div>
+    <p style="text-align:right;font-style:italic;color:var(--ink)">With love, Sim ♡</p>
+    <div class="actions">
+      <button id="redeem">Redeem this coupon ♡</button>
+      <button class="secondary" id="cancel">Keep it for later</button>
+    </div>
+  </article>
+</div>
+
+<script>
+const coupons = [
+ {name:"The Date Night Pass",description:"One date planned entirely by you. I reserve the right to look pretty and complain about being hungry.",fine:"Valid for one date of your choosing."},
+ {name:"The Movie Night Pass",description:"You choose the movie. I promise not to complain about your choice. Much.",fine:"Snacks are compulsory."},
+ {name:"The Unlimited Hug Pass",description:"A hug whenever you need one. No appointment necessary.",fine:"Valid even on grumpy days."},
+ {name:"The Little Surprise",description:"One surprise planned by yours truly. You simply have to show up.",fine:"Patience is required."},
+ {name:"The Chef's Special",description:"One meal made with love. Taste-testing and compliments are encouraged.",fine:"Menu subject to availability."},
+ {name:"The Your Choice Pass",description:"You pick what we do, where we go and what we eat. For once, I shall not be the decision-maker.",fine:"One-time use. Choose wisely."},
+ {name:"The Love Letter",description:"One handwritten letter reminding you just how much you mean to me. Yes, you can keep it forever.",fine:"No expiry date."},
+ {name:"The Princess Treatment",description:"One entire day of extra thoughtfulness, affection and being spoiled with little things.",fine:"Royal behaviour expected."},
+ {name:"The Reassurance Pass",description:"A reminder that you're loved, appreciated and very much stuck with my nonsense.",fine:"Redeem whenever you need."},
+ {name:"The Wildcard",description:"One reasonable request of your choice. Surprise me, Pereira.",fine:"Subject to Director Sim's approval."}
+];
+const storageKey="similicious-preston-coupons-v1";
+let redeemed=[];
+try{redeemed=JSON.parse(localStorage.getItem(storageKey)||"[]");if(!Array.isArray(redeemed))redeemed=[];}catch(e){redeemed=[];}
+let selected=-1;
+const grid=document.getElementById("coupons"),modal=document.getElementById("modal");
+function save(){try{localStorage.setItem(storageKey,JSON.stringify(redeemed));}catch(e){}}
+function render(){
+ grid.innerHTML="";
+ coupons.forEach((c,i)=>{
+  const done=redeemed.includes(i),card=document.createElement("button");
+  card.type="button";card.className="coupon"+(done?" done":"");
+  card.innerHTML=`<div class="num"><span>NO. ${String(i+1).padStart(2,"0")}</span><span>♡</span></div><h3>${c.name}</h3><p>${c.description}</p><div class="fine">${c.fine}</div><span class="status">${done?"REDEEMED ♡":"OPEN LETTER →"}</span>`;
+  card.addEventListener("click",()=>openCoupon(i));grid.appendChild(card);
+ });
+ const n=redeemed.length;
+ document.getElementById("count").textContent=`${n}/10`;
+ document.getElementById("fill").style.width=`${n*10}%`;
+ document.getElementById("hint").textContent=n===10?"All coupons redeemed! The Director is very proud. ♡":`${10-n} little treats still waiting to be claimed.`;
+ document.getElementById("secret").classList.toggle("show",n===10);
+}
+function openCoupon(i){
+ selected=i;const c=coupons[i],done=redeemed.includes(i);
+ document.getElementById("modalNumber").textContent=`A LETTER FOR PRESTON · NO. ${String(i+1).padStart(2,"0")}`;
+ document.getElementById("modalTitle").textContent=c.name;
+ document.getElementById("modalDescription").textContent=c.description;
+ document.getElementById("modalFine").textContent=c.fine;
+ document.getElementById("redeem").textContent=done?"Already redeemed ♡":"Redeem this coupon ♡";
+ document.getElementById("redeem").disabled=done;
+ modal.classList.add("open");
+}
+function closeModal(){modal.classList.remove("open");}
+document.getElementById("redeem").addEventListener("click",()=>{
+ if(selected<0||redeemed.includes(selected))return;
+ redeemed.push(selected);save();render();closeModal();
+ if(redeemed.length===10)setTimeout(()=>document.getElementById("secret").scrollIntoView({behavior:"smooth",block:"center"}),250);
+});
+document.getElementById("close").addEventListener("click",closeModal);
+document.getElementById("cancel").addEventListener("click",closeModal);
+modal.addEventListener("click",e=>{if(e.target===modal)closeModal();});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal();});
+render();
+</script>
+</body>
+</html>
